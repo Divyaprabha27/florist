@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular container background (optional, remove fill for transparent) -->
+  <circle cx="50" cy="50" r="48" fill="#d4a373" stroke="#b08d55" stroke-width="2"/>
+  
+  <!-- Abstract Floral Icon in White -->
+  <path d="M50 25C50 25 35 35 35 50C35 65 50 80 50 80C50 80 65 65 65 50C65 35 50 25 50 25ZM50 25C50 25 60 35 60 50C60 60 50 70 50 70M50 25C50 25 40 35 40 50C40 60 50 70 50 70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 50H65" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
