@@ -21,6 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
       setTheme(newTheme);
     });
   }
+
+  // 3. Scroll to Top Button
+  const scrollTopBtn = document.getElementById('scrollToTopBtn');
+
+  if (scrollTopBtn) {
+    // Show/Hide button on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll to top on click
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
 
 function setTheme(theme) {
