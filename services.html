@@ -27,7 +27,14 @@
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="proposals.html">Proposals</a></li>
@@ -48,10 +55,12 @@
         </div>
     </nav>
 
-    <section class="py-5 text-center">
+    <!-- Hero Section -->
+    <section
+        class="page-hero page-hero-services d-flex align-items-center justify-content-center text-center text-white mb-5">
         <div class="container slide-up">
-            <h1 class="display-4 brand-font">Our Offerings</h1>
-            <p class="lead text-muted">Curated floral experiences for every occasion.</p>
+            <h1 class="display-3 brand-font mb-3">Our Offerings</h1>
+            <p class="lead fst-italic letter-spacing-1">Curated floral experiences for every occasion.</p>
         </div>
     </section>
 
@@ -132,6 +141,101 @@
                                         hands-on classes. Perfect for bridal showers or creative retreats.</p>
                                     <a href="contact.html" class="text-accent fw-bold small text-decoration-none">Join
                                         Waitlist &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-4">
+            <div class="text-center mb-5 slide-up">
+                <h6 class="text-accent text-uppercase letter-spacing-2 mb-3">How It Works</h6>
+                <h2 class="display-5 brand-font">The Journey</h2>
+            </div>
+            <div class="row g-4 text-center slide-up delay-1">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-accent mb-3 font-monospace">01</div>
+                        <h4 class="brand-font h5 mb-3">Consultation & Vision</h4>
+                        <p class="text-muted small">We start with a coffee and a conversation to understand your story,
+                            style, and dreams for the big day.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-accent mb-3 font-monospace">02</div>
+                        <h4 class="brand-font h5 mb-3">Design & Proposal</h4>
+                        <p class="text-muted small">We curate a bespoke mood board and detailed floral plan, selecting
+                            seasonal blooms that match your palette.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-accent mb-3 font-monospace">03</div>
+                        <h4 class="brand-font h5 mb-3">Creation & Celebration</h4>
+                        <p class="text-muted small">Our team handles all procurement, conditioning, and day-of
+                            installation
+                            to bring the vision to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5 slide-up">
+                        <h2 class="display-5 brand-font">Common Questions</h2>
+                    </div>
+                    <div class="accordion slide-up delay-1" id="faqAccordion">
+                        <div class="accordion-item border-0 border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed hover-accent bg-transparent shadow-none px-0"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <span class="brand-font h6 mb-0">What is your minimum investment?</span>
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 text-muted small">
+                                    Our full-service wedding design begins at $5,000. This ensures we can source the
+                                    highest quality premium blooms and provide dedicated team support for your event.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed hover-accent bg-transparent shadow-none px-0"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <span class="brand-font h6 mb-0">Do you travel for destination weddings?</span>
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 text-muted small">
+                                    Absolutely. We love to travel! We have experience flourishing weddings across
+                                    Europe and the Americas. Travel fees are calculated based on location and
+                                    logistics.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed hover-accent bg-transparent shadow-none px-0"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <span class="brand-font h6 mb-0">How far in advance should we book?</span>
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 text-muted small">
+                                    We recommend booking 9-12 months in advance to secure your date, especially for
+                                    peak season (May-October). We take a limited number of commissions per year.
                                 </div>
                             </div>
                         </div>

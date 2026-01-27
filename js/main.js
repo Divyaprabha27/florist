@@ -4,14 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Theme Initialization
   const themeToggleBtn = document.getElementById('theme-toggle');
   const storedTheme = localStorage.getItem('florae_theme');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Apply saved theme or system preference
-  if (storedTheme === 'dark' || (!storedTheme && systemDark)) {
+
+  /* 
+  // Disable automatic theme restoration - Always start Light
+  // Apply saved theme or default to light
+  if (storedTheme === 'dark') {
     setTheme('dark');
   } else {
     setTheme('light');
   }
+  */
+  setTheme('light'); // Force Light Mode initialization
 
   // 2. Event Listener
   if (themeToggleBtn) {

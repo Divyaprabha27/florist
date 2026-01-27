@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floraé Studio | Editorial</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Editorial Specific Styles (Inline for quicker iteration, clean up later if needed) */
+    .hero-fullscreen {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1507290439931-a861b5a38200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .editorial-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+    }
+
+    .zig-zag-img {
+      height: 600px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/logo.svg" alt="Logo" width="35" height="35" class="rounded-circle object-fit-cover">
+        <span>Floraé<span class="text-accent">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Home</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="proposals.html">Proposals</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <a href="login.html" class="text-decoration-none fw-bold small" style="color: var(--text-main);">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+          <a href="dashboard.html" class="btn btn-outline-secondary btn-sm rounded-pill border-0" role="button"><i
+              class="bi bi-grid-fill"></i></a>
+          <button class="btn btn-link p-0 text-decoration-none" id="theme-toggle"
+            style="color: var(--text-main); font-size: 1.2rem;">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Editorial Hero -->
+  <header class="hero-fullscreen fade-in">
+    <div class="container">
+      <p class="text-uppercase letter-spacing-2 mb-4 text-white slide-up">The Studio</p>
+      <h1 class="display-1 editorial-text mb-5 text-white slide-up delay-1">Nature, Curated.</h1>
+      <a href="#muse" class="btn btn-outline-light rounded-pill px-5 py-3 slide-up delay-2">Enter the Experience</a>
+    </div>
+  </header>
+
+  <!-- The Muse / Intro -->
+  <section id="muse" class="py-5 bg-surface">
+    <div class="container py-5 text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <i class="bi bi-flower3 display-1 text-muted opacity-25 mb-4"></i>
+          <h2 class="display-4 editorial-text mb-4">"We don't just arrange flowers.<br>We sculpt emotions."</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Leaving behind traditional structures, our studio embraces the wild, the asymmetrical, and the beautifully
+            imperfect. Every stem is chosen for its character, every leaf for its movement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- As Seen In (New) -->
+  <section class="py-4 border-top border-bottom">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center flex-wrap gap-5 align-items-center opacity-50 logo-strip">
+        <h4 class="text-muted brand-font fst-italic m-0">Vogue</h4>
+        <h4 class="text-muted brand-font fst-italic m-0">Harper's Bazaar</h4>
+        <h4 class="text-muted brand-font fst-italic m-0">The Lane</h4>
+        <h4 class="text-muted brand-font fst-italic m-0">Kinfolk</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Works (Zig Zag) -->
+  <section class="py-0">
+    <!-- Work 1 -->
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6">
+        <img
+          src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+          class="zig-zag-img" alt="Wedding 1">
+      </div>
+      <div class="col-lg-6 p-5 bg-light-subtle h-100">
+        <div class="p-lg-5">
+          <span class="text-accent text-uppercase small letter-spacing-2">Featured Wedding</span>
+          <h2 class="display-5 editorial-text mt-2 mb-4">The Glasshouse</h2>
+          <p class="text-muted mb-4">A botanical immersion in the heart of the city. We transformed a concrete
+            industrial space into a breathing rainforest.</p>
+          <a href="portfolio.html" class="view-project-link fw-bold pb-1">View
+            Project</a>
+        </div>
+      </div>
+    </div>
+    <!-- Work 2 -->
+    <div class="row g-0 align-items-center flex-row-reverse">
+      <div class="col-lg-6">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+          class="zig-zag-img" alt="Wedding 2">
+      </div>
+      <div class="col-lg-6 p-5 bg-surface h-100">
+        <div class="p-lg-5">
+          <span class="text-accent text-uppercase small letter-spacing-2">Featured Wedding</span>
+          <h2 class="display-5 editorial-text mt-2 mb-4">Cliffside Romance</h2>
+          <p class="text-muted mb-4">Windswept florals that mirrored the untamed coast. Organic, muted tones blending
+            seamlessly with the horizon.</p>
+          <a href="portfolio.html" class="view-project-link fw-bold pb-1">View
+            Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Services List -->
+  <section class="py-5 bg-dark text-white">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h2 class="display-4 editorial-text text-white">Our<br>Craft.</h2>
+          <p class="text-white mt-3">Comprehensive design services for discerning couples.</p>
+          <a href="services.html" class="btn btn-outline-light rounded-pill px-4 mt-3">Full Service Menu</a>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <ul class="list-unstyled">
+            <li class="border-bottom border-secondary py-4 d-flex justify-content-between align-items-center">
+              <h3 class="h4 font-weight-light mb-0">Floral Architecture</h3>
+              <i class="bi bi-arrow-right text-accent"></i>
+            </li>
+            <li class="border-bottom border-secondary py-4 d-flex justify-content-between align-items-center">
+              <h3 class="h4 font-weight-light mb-0">Event Styling & Curation</h3>
+              <i class="bi bi-arrow-right text-accent"></i>
+            </li>
+            <li class="border-bottom border-secondary py-4 d-flex justify-content-between align-items-center">
+              <h3 class="h4 font-weight-light mb-0">Destination Logistics</h3>
+              <i class="bi bi-arrow-right text-accent"></i>
+            </li>
+            <li class="border-bottom border-secondary py-4 d-flex justify-content-between align-items-center">
+              <h3 class="h4 font-weight-light mb-0">Creative Direction</h3>
+              <i class="bi bi-arrow-right text-accent"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section py-5">
+    <div class="container text-center py-4">
+      <h2 class="display-6 brand-font mb-3">Join the Layout</h2>
+      <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">Art, design, and petals in your inbox.</p>
+      <form class="mx-auto" style="max-width: 400px;">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Your email address" aria-label="Email">
+          <button class="btn btn-primary px-4" type="button">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 mt-0" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Col 1: Brand -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="brand-font mb-3">Floraé<span class="text-accent">.</span></h4>
+          <p class="small text-muted mb-4">Crafting organic, fine-art floral designs for modern weddings and events.
+            Rooted in nature, designed with emotion.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-muted"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-muted"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 small letter-spacing-2">Explore</h6>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+            <li class="mb-2"><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+            <li class="mb-2"><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+            <li class="mb-2"><a href="proposals.html" class="text-decoration-none text-muted">Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 small letter-spacing-2">Services</h6>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2">Full Service Design</li>
+            <li class="mb-2">Event Styling</li>
+            <li class="mb-2">Installations</li>
+            <li class="mb-2">Destination Weddings</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 small letter-spacing-2">Visit Us</h6>
+          <address class="small text-muted fst-normal">
+            123 Floral Avenue,<br>
+            New York, NY 10012<br><br>
+            <a href="mailto:hello@florae.com" class="text-decoration-none text-muted">hello@florae.com</a><br>
+            +1 (555) 123-4567
+          </address>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-4 border-top border-light">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">&copy; 2026 Floraé Weddings. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="small text-muted text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="small text-muted text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS + Custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

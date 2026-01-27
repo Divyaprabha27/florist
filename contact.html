@@ -27,7 +27,14 @@
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="proposals.html">Proposals</a></li>
@@ -48,12 +55,19 @@
         </div>
     </nav>
 
-    <div class="container py-5">
-        <div class="row align-items-center g-5 slide-up">
-            <div class="col-lg-5">
-                <h1 class="display-4 mb-4">Get in Touch</h1>
-                <p class="lead text-muted mb-5">Tell us about your dream day.</p>
+    <!-- Hero Section -->
+    <section
+        class="page-hero page-hero-contact d-flex align-items-center justify-content-center text-center text-white mb-5">
+        <div class="container slide-up">
+            <h1 class="display-3 brand-font mb-3">Get in Touch</h1>
+            <p class="lead fst-italic letter-spacing-1">Tell us about your dream day.</p>
+        </div>
+    </section>
 
+    <div class="container py-5">
+        <div class="row g-5 slide-up">
+            <div class="col-lg-5">
+                <h3 class="brand-font mb-4">Contact Details</h3>
                 <div class="d-flex align-items-center mb-4">
                     <i class="bi bi-envelope fs-4 text-accent me-3"></i>
                     <div>
@@ -61,12 +75,19 @@
                         <small class="text-muted">hello@floraeweddings.com</small>
                     </div>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center mb-4">
                     <i class="bi bi-geo-alt fs-4 text-accent me-3"></i>
                     <div>
                         <h6 class="mb-0">Studio</h6>
                         <small class="text-muted">123 Floral Ave, New York</small>
                     </div>
+                </div>
+                <!-- Map -->
+                <div class="mt-4 rounded-4 overflow-hidden shadow-sm" style="height: 250px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="col-lg-7">

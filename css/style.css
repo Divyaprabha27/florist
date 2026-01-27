@@ -26,6 +26,61 @@
   --nav-bg: rgba(250, 249, 246, 0.95);
 }
 
+/* Page Hero (e.g., Portfolio) */
+.page-hero {
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* Ensure it sits nicely behind/below nav if desired, or standard flow */
+  margin-top: -81px;
+  /* Pull up behind navbar */
+  padding-top: 81px;
+  /* Compensate content */
+}
+
+.page-hero-portfolio {
+  background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.page-hero-services {
+  background-image: url('https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1920&q=80');
+}
+
+.page-hero-proposals {
+  background-image: url('https://tse2.mm.bing.net/th/id/OIP.PQ_xsCZ7t3HhmSe2FO5MfgHaE8?pid=Api&P=0&h=180');
+}
+
+.page-hero-contact {
+  background-image: url('https://images.unsplash.com/photo-1596073419667-9d77d59f033f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.page-hero,
+.page-hero h1,
+.page-hero p,
+.page-hero .lead {
+  color: #ffffff !important;
+}
+
+/* Overlay for Hero */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark overlay */
+  z-index: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+  /* Content above overlay */
+}
+
 /* Dark Theme Palette */
 [data-theme="dark"] {
   --bg-body: #121212;
@@ -42,6 +97,19 @@
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.4);
 
   --nav-bg: rgba(18, 18, 18, 0.95);
+}
+
+/* Home 2 View Project Link */
+.view-project-link {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.view-project-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* Force text visibility in dark mode against Bootstrap */
@@ -225,6 +293,24 @@ a {
   }
 }
 
+/* 9. As Seen In (Logos) */
+.logo-strip {
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.logo-strip:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* 10. Newsletter Section */
+.newsletter-section {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+}
+
 .slide-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -315,4 +401,210 @@ footer a:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-accent);
+}
+
+/* Home 2 Specific Helpers */
+.bg-accent-subtle {
+  background-color: rgba(212, 163, 115, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-accent-subtle {
+  background-color: rgba(224, 176, 128, 0.15) !important;
+}
+
+.bg-surface {
+  background-color: var(--bg-card) !important;
+  transition: background-color 0.3s ease;
+}
+
+.card-hover-effect {
+  transition: all 0.4s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .card-hover-effect:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 8. Dropdown Menu Styles */
+.dropdown-menu {
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+  padding: 0.5rem;
+  background-color: var(--bg-card);
+}
+
+.dropdown-item {
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(212, 163, 115, 0.1);
+  color: var(--color-accent);
+}
+
+.dropdown-item:active {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Dark Mode Dropdowns */
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+}
+
+/* Hover Dropdown for Desktop */
+@media (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover>.dropdown-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 11. Dashboard Sidebar Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  z-index: 1040;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  /* Sidebar width */
+  padding: 2rem;
+  background-color: var(--bg-body);
+  min-height: 100vh;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--text-main);
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-nav .nav-link {
+  color: var(--text-muted) !important;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: rgba(212, 163, 115, 0.1);
+  color: var(--color-accent) !important;
+}
+
+.sidebar-nav .nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsiveness for Sidebar */
+@media (max-width: 991.98px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* 12. Dashboard Extra Components */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline-item:last-child {
+  border-left-color: transparent;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 163, 115, 0.1);
+  color: var(--color-accent);
+  border-radius: 50%;
 }
