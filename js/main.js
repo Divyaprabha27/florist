@@ -6,16 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const storedTheme = localStorage.getItem('florae_theme');
 
 
-  /* 
-  // Disable automatic theme restoration - Always start Light
   // Apply saved theme or default to light
   if (storedTheme === 'dark') {
     setTheme('dark');
   } else {
     setTheme('light');
   }
-  */
-  setTheme('light'); // Force Light Mode initialization
 
   // 2. Event Listener
   if (themeToggleBtn) {
