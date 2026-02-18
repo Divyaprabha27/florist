@@ -361,7 +361,8 @@ a {
 }
 
 /* Footer */
-footer a:hover {
+footer a:hover,
+.social-links a:hover {
   color: var(--color-accent) !important;
 }
 
@@ -448,7 +449,8 @@ footer a:hover {
   transition: all 0.2s ease;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item.active {
   background-color: rgba(212, 163, 115, 0.1);
   color: var(--color-accent);
 }
@@ -633,4 +635,17 @@ footer a:hover {
 
 [data-theme="dark"] .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 13. Responsive Tweaks for 1024px (iPad Pro/Small Laptops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .nav-link {
+    margin: 0 0.15rem;
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.9rem;
+  }
+
+  .navbar .gap-3 {
+    gap: 0.5rem !important;
+  }
 }
