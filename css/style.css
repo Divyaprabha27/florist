@@ -507,9 +507,9 @@ footer a:hover,
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   background-color: var(--bg-card);
-  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   z-index: 1040;
   overflow-y: auto;
   transition: transform 0.3s ease;
@@ -517,7 +517,7 @@ footer a:hover,
 
 .main-content {
   flex: 1;
-  margin-right: 280px;
+  margin-left: 280px;
   /* Sidebar width */
   padding: 2rem;
   background-color: var(--bg-body);
@@ -556,6 +556,10 @@ footer a:hover,
 /* Mobile Responsiveness for Sidebar */
 @media (max-width: 991.98px) {
   .sidebar {
+    right: 0;
+    left: auto;
+    border-left: 1px solid var(--border-color);
+    border-right: none;
     transform: translateX(100%);
     visibility: hidden;
   }
@@ -567,6 +571,7 @@ footer a:hover,
 
   .main-content {
     margin-right: 0;
+    margin-left: 0;
   }
 
   .sidebar-overlay {
