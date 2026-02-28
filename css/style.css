@@ -507,9 +507,9 @@ footer a:hover,
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  right: 0;
   background-color: var(--bg-card);
-  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
   z-index: 1040;
   overflow-y: auto;
   transition: transform 0.3s ease;
@@ -517,7 +517,7 @@ footer a:hover,
 
 .main-content {
   flex: 1;
-  margin-left: 280px;
+  margin-right: 280px;
   /* Sidebar width */
   padding: 2rem;
   background-color: var(--bg-body);
@@ -556,22 +556,42 @@ footer a:hover,
 /* Mobile Responsiveness for Sidebar */
 @media (max-width: 991.98px) {
   .sidebar {
-    transform: translateX(-100%);
+    transform: translateX(100%);
+    visibility: hidden;
   }
 
   .sidebar.show {
     transform: translateX(0);
+    visibility: visible;
   }
 
   .main-content {
-    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 /* 12. Dashboard Extra Components */
 .top-bar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;

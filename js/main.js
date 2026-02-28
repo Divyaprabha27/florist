@@ -43,6 +43,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 4. Dashboard Sidebar Toggle
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const sidebar = document.getElementById('sidebar');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+  if (sidebarToggle && sidebar && sidebarOverlay) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.add('show');
+      sidebarOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    const closeSidebar = () => {
+      sidebar.classList.remove('show');
+      sidebarOverlay.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scrolling
+    };
+
+    if (sidebarClose) {
+      sidebarClose.addEventListener('click', closeSidebar);
+    }
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
 });
 
 function setTheme(theme) {
